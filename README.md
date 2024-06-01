@@ -21,3 +21,9 @@ Groups that may be interested in such technologies are:
 
 Prior to training we split the dataset into a training set consisting of 80% of the data, and a test set consisting of the remaining 20% of the data. The key metric will be accuracy (that is, the percentage of correctly predicted examples).
 
+## Methods
+
+For training we used performed a random 80-20 split of the aforemenetioned dataset stratified along the classes, and made sure to have no overlap in places between the training and test set. The split dataset can be found [here](https://www.kaggle.com/datasets/bezemekz/gsv-cities-cleaned-normalized-train-test).
+
+
+## Results
