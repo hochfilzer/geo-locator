@@ -1,5 +1,20 @@
 ## Project description
 ### Overview
+In the game [GeuGuessr](https://www.geoguessr.com) you get placed in a random Google streetview location, and through moving around and looking around you can make a guess as to where you were spawned. The main goal of this project was to develop a model that can guess the location where a photo was taken in. There are various professional GeoGuessr players who can identify their approximate location astoundingly fast by identifying distinguishing features such as license plates, street signs or other more or less specific features.
+
+The aim of this project was to see whether one can leverage the active recognition of certain features in order to improve the quality of a guess.
+
+## Methodology
+
+In order to obtain good results for a random location throughout the whole world, it is necessary to employ very large datasets and deep models. Due to computational restrictions we decided to instead use the reasonably sized (around 500.000 pictures) dataset from this [Kaggle dataset](https://www.kaggle.com/datasets/amaralibey/gsv-cities), which includes pictures from 23 different cities. After cleaning the dataset and removing heavily over- and underrepresented cities we ended up with a dataset comprised of about 350.000 pictures from 17 different cities. We then performed an 80-20 split into a training and a test set, stratified on the cities.
+
+### The end-to-end model
+This model does not obtain any additional feature input except for the pictures and their label. The architecture of this model is comprised of the MobilenetV2 network, which is a relatively lightweight network taht comes pretrained and is designed for image recognition tasks. We then added three Dense layers of 256, 256 and 17 neurons each at the end, separated by 20% dropout layers. We only trained the weights on the additional layres and left the previous model unchanged. This performed much better than initial attempts of creating our own CNN. We also quickly realised that due to the size of the dataset, hyperparameter optimisation takes a long time. The final model was trained over 4 epochs, and the training took around 5 hours on Kaggle (using an Nvidia P100 GPU).
+
+### The feature based classifiers
+
+
+[Kaggle dataset](https://www.kaggle.com/datasets/amaralibey/gsv-cities)
 The main goal of this project is to create a model, which can recognise the location (in our case city) based on a Google Streetview image taken in that city. To do this for the whole world this would require an enormous 
 dataset and very long training times. Therefore we restricted ourselves to images from 23 distinct cities as they are given in this [Kaggle dataset](https://www.kaggle.com/datasets/amaralibey/gsv-cities). 
 
