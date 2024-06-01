@@ -27,3 +27,6 @@ For training we used performed a random 80-20 split of the aforemenetioned datas
 
 
 ## Results
+
+## Installation requirements
+The necessary packages and their versions can be found in `requirements.txt`. It is possible to install these via `pip install -r requirements.txt` once the repository was cloned and pulled.
