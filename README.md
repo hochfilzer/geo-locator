@@ -7,6 +7,8 @@ The aim of this project was to see whether one can leverage the active recogniti
 
 ## Methodology
 
+![Workflow](./readme_images/workflow.jpg)
+
 In order to obtain good results for a random location throughout the whole world, it is necessary to employ very large datasets and deep models. Due to computational restrictions we decided to instead use the reasonably sized (around 500.000 pictures) dataset from this [Kaggle dataset](https://www.kaggle.com/datasets/amaralibey/gsv-cities), which includes pictures from 23 different cities. After cleaning the dataset and removing heavily over- and underrepresented cities we ended up with a dataset comprised of about 350.000 pictures from 17 different cities. We then performed an 80-20 split into a training and a test set, stratified on the cities. The cleaned and split up test set is available [here](https://www.kaggle.com/datasets/bezemekz/gsv-cities-cleaned-normalized-train-test). We left the test set completely untouched until we made our model choices and had trained the model.
 
 ### The end-to-end model
