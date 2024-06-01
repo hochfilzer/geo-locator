@@ -1,5 +1,5 @@
 ## Project description
-# Overview
+### Overview
 The main goal of this project is to create a model, which can recognise the location (in our case city) based on a Google Streetview image taken in that city. To do this for the whole world this would require an enormous 
 dataset and very long training times. Therefore we restricted ourselves to images from 23 distinct cities as they are given in this [Kaggle dataset](https://www.kaggle.com/datasets/amaralibey/gsv-cities). 
 
