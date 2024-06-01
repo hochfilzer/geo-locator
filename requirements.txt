@@ -1,0 +1,11 @@
+tensorflow==2.16.1
+logging==0.5.1.2
+numpy==1.26.4
+scipy==1.11.4
+pandas==1.5.3
+twdm==4.66.2
+opencv-python==4.9.0
+torch==2.2.1
+PIL==10.2.0
+torchvision==0.17.1
+six==1.16.0
