@@ -31,7 +31,6 @@ The necessary packages and their versions can be found in `requirements.txt`. It
 One can then import `all_models` and use the class `GeoLocator`. `GeoLocator` has a `predict` method that takes an image path and makes a prediction where the picture leading to this path was taken. For more information on how to use our model we refer to the `demo.ipynb`, which should run once the requirements mentioned above are satisfied.
 
 
-There is a demo notebook available, which should be able to run well once the necessary requirements are installed and the repository was pulled. Finally, for the model
-
+There is a demo notebook available, which should be able to run well once the necessary requirements are installed and the repository was pulled. 
 
 
